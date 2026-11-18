@@ -1,0 +1,30 @@
+{
+  "name": "kubota",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9"
+  },
+  "scripts": {
+    "start": "node ./node_modules/@sap/cds/bin/serve.js srv/csn.json",
+    "build": "npx cds build --production && npx mbt build -p xsa -t mta_archives"
+  },
+  "private": true,
+  "engines": {
+    "node": "^22"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana",
+        "auth": "dummy"
+      }
+    }
+  }
+}

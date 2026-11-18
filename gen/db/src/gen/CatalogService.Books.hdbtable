@@ -1,0 +1,6 @@
+COLUMN TABLE CatalogService_Books (
+  ID INTEGER NOT NULL,
+  title NVARCHAR(5000),
+  author NVARCHAR(5000),
+  PRIMARY KEY(ID)
+)
